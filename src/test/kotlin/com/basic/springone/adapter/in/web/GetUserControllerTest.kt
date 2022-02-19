@@ -27,7 +27,7 @@ class GetUserControllerTest {
     private lateinit var idGenerator: IdGenerator
 
     @Test
-    fun `test receive zero entries with success`() {
+    fun `test receive entries with success`() {
         val apiResponse = defaultApiResponse()
 
         openApi.stub {
