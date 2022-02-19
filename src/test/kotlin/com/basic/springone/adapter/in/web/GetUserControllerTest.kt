@@ -52,4 +52,15 @@ class GetUserControllerTest {
             }
         }
     }
+
+    @Test
+    fun `test wrong request must receive 404`() {
+
+        mockMvc.get("/v1/user") {
+            contentType = MediaType.APPLICATION_JSON
+            content = loadPayload("controller/v1_user_wrong_entry_request.json")
+        }.andExpect {
+            status { isBadRequest() }
+        }
+    }
 }
