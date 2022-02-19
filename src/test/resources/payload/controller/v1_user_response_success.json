@@ -1,0 +1,17 @@
+{
+  "uuid": "05d1b645-a902-45f8-94b9-e148926656bd",
+  "emailWithPassword": "UserRequest(email=b@gmail.com, password=123Aa$abc)",
+  "entriesSize": 2,
+  "entries": [
+    {
+      "api": "api_1",
+      "description": "descricao_1",
+      "category": "categoria_1"
+    },
+    {
+      "api": "api_2",
+      "description": "descricao_2",
+      "category": "categoria_2"
+    }
+  ]
+}
