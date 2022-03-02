@@ -1,6 +1,6 @@
 package com.basic.springone.ports.out.response
 
-import com.basic.springone.adapter.out.response.EntryResponse
+import com.basic.springone.adapter.`in`.web.response.EntryResponse
 import com.fasterxml.jackson.annotation.JsonProperty
 
 data class ApiResponse(

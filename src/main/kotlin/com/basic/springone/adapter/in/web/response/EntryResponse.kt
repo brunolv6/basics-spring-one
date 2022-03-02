@@ -1,4 +1,4 @@
-package com.basic.springone.adapter.out.response
+package com.basic.springone.adapter.`in`.web.response
 
 data class EntryResponse(
     val api: String?,

@@ -1,4 +1,4 @@
-package com.basic.springone.adapter.`in`.validators
+package com.basic.springone.adapter.`in`.web.validators
 
 import javax.validation.Constraint
 import javax.validation.ConstraintValidator
