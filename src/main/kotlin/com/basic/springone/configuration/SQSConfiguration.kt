@@ -18,6 +18,9 @@ import org.springframework.context.annotation.Primary
 @EnableSqs
 class SQSConfiguration {
 
+    @Value("\${cloud.aws.region.static}")
+    private val region: String? = null
+
     @Value("\${cloud.aws.credentials.access-key}")
     private val accessKey: String? = null
 
@@ -27,7 +30,7 @@ class SQSConfiguration {
     @Bean
     @Primary
     fun amazonSQSAsync(): AmazonSQSAsync? {
-        return AmazonSQSAsyncClientBuilder.standard().withRegion(Regions.SA_EAST_1)
+        return AmazonSQSAsyncClientBuilder.standard().withRegion(region)
             .withCredentials(AWSStaticCredentialsProvider(BasicAWSCredentials(accessKey, secretKey)))
             .build()
     }
