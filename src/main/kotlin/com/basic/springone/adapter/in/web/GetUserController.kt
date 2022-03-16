@@ -2,7 +2,6 @@ package com.basic.springone.adapter.`in`.web
 
 import com.basic.springone.adapter.`in`.web.request.UserRequest
 import com.basic.springone.adapter.`in`.web.response.UserResponse
-import com.basic.springone.application.port.out.UserDataGateway
 import com.basic.springone.ports.out.OpenApi
 import com.basic.springone.ports.out.response.ApiResponse
 import org.springframework.util.IdGenerator
@@ -15,14 +14,11 @@ import javax.validation.Valid
 @RestController
 class GetUserController(
     private val openApi: OpenApi,
-    private val idGenerator: IdGenerator,
-    private val userDataGateway: UserDataGateway
+    private val idGenerator: IdGenerator
 ) {
 
     @GetMapping("/v1/user")
     fun getUser(@RequestBody @Valid userRequest: UserRequest): UserResponse {
-        userDataGateway.bulk(userRequest)
-
         return userRequest.mapperToUserResponse(fetchUUID(), fetchEntries())
     }
 

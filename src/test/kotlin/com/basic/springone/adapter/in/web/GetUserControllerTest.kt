@@ -27,7 +27,7 @@ class GetUserControllerTest {
     private lateinit var idGenerator: IdGenerator
 
     @Test
-    fun `test receive entries with success`() {
+    fun `test get entries with success`() {
         val apiResponse = defaultApiResponse()
 
         openApi.stub {
@@ -54,7 +54,7 @@ class GetUserControllerTest {
     }
 
     @Test
-    fun `test wrong request must receive 404`() {
+    fun `test receive 404 when password is invalid`() {
 
         mockMvc.get("/v1/user") {
             contentType = MediaType.APPLICATION_JSON
