@@ -16,7 +16,7 @@ class OpenApiFacade(
         if (entries.count == 0) return entries
 
         return when (entries.count) {
-            2 -> ApiResponse(count = 2, listOf(ApiResponse.Entry("api-tipo-2", null, null)))
+            2 -> ApiResponse(count = 2, entries = listOf(ApiResponse.Entry("api-tipo-2", null, null)))
             3 -> throw NotFoundException("Sem Retorno")
             else -> ApiResponse(count = 3, listOf(ApiResponse.Entry("api-tipo-3", null, null)))
         }
