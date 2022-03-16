@@ -2,9 +2,9 @@ package com.basic.springone.adapter.`in`.web
 
 import com.basic.springone.loadPayload
 import com.basic.springone.objectmother.ApiObjectMother.defaultApiResponse
-import com.basic.springone.ports.out.OpenApi
+import com.basic.springone.port.facade.OpenApiFacade
 import org.junit.jupiter.api.Test
-import org.mockito.kotlin.stub
+import com.nhaarman.mockitokotlin2.stub
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
 import org.springframework.boot.test.mock.mockito.MockBean
@@ -21,7 +21,7 @@ class GetUserControllerTest {
     private lateinit var mockMvc: MockMvc
 
     @MockBean
-    private lateinit var openApi: OpenApi
+    private lateinit var openApiFacade: OpenApiFacade
 
     @MockBean
     private lateinit var idGenerator: IdGenerator
@@ -30,9 +30,9 @@ class GetUserControllerTest {
     fun `test get entries with success`() {
         val apiResponse = defaultApiResponse()
 
-        openApi.stub {
+        openApiFacade.stub {
             on {
-                getEntries()
+                fetchEntries()
             }.thenReturn(apiResponse)
         }
 

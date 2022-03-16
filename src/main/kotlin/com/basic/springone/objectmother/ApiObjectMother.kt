@@ -1,7 +1,7 @@
 package com.basic.springone.objectmother
 
-import com.basic.springone.ports.out.response.ApiResponse
-import com.basic.springone.ports.out.response.ApiResponse.Entry
+import com.basic.springone.adapter.out.ApiResponse
+import com.basic.springone.adapter.out.ApiResponse.Entry
 
 object ApiObjectMother {
 
@@ -20,5 +20,12 @@ object ApiObjectMother {
                     category = "categoria_2"
                 ),
             )
+        )
+
+    fun customApiResponseEntry() =
+        ApiResponse.Entry(
+            api = "customApi",
+            description = "descricao_1",
+            category = "categoria_1"
         )
 }

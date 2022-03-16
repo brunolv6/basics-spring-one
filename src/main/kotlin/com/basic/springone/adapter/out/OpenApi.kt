@@ -1,6 +1,5 @@
-package com.basic.springone.ports.out
+package com.basic.springone.adapter.out
 
-import com.basic.springone.ports.out.response.ApiResponse
 import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.web.bind.annotation.GetMapping
 

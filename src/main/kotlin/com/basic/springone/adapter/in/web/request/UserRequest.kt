@@ -2,7 +2,7 @@ package com.basic.springone.adapter.`in`.web.request
 
 import com.basic.springone.adapter.`in`.web.validators.IsValidPassword
 import com.basic.springone.adapter.`in`.web.response.UserResponse
-import com.basic.springone.ports.out.response.ApiResponse
+import com.basic.springone.adapter.out.ApiResponse
 import java.util.*
 import javax.validation.constraints.Email
 import javax.validation.constraints.NotBlank

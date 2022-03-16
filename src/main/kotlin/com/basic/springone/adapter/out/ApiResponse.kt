@@ -1,4 +1,4 @@
-package com.basic.springone.ports.out.response
+package com.basic.springone.adapter.out
 
 import com.basic.springone.adapter.`in`.web.response.EntryResponse
 import com.fasterxml.jackson.annotation.JsonProperty
